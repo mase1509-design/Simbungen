@@ -5,6 +5,8 @@ let selectedDate = null;
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
 
+const exerciseNames = ["Innenseiten Heber", "Fußabrollen", "Kniebeugen"];
+
 // Monatslabel aktualisieren
 function renderMonthLabel() {
     const monthNames = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
@@ -26,7 +28,7 @@ function renderCalendar() {
         dayDiv.textContent = day;
 
         // Wochenende hervorheben
-        const weekday = new Date(currentYear, currentMonth, day-1).getDay(); // 0=Sonntag
+        const weekday = new Date(currentYear, currentMonth, day-1).getDay();
         if (weekday === 0 || weekday === 6) dayDiv.classList.add('weekend');
 
         // Statusfarben
@@ -70,7 +72,7 @@ function renderExercises(dateStr) {
         if (data[dateStr][i]) exDiv.classList.add('done');
 
         const span = document.createElement('span');
-        span.textContent = `Übung ${i+1}`;
+        span.textContent = exerciseNames[i];
 
         const btn = document.createElement('button');
         btn.classList.add('exercise-btn');
