@@ -27,9 +27,7 @@ function renderCalendar() {
         dayDiv.classList.add('day');
         dayDiv.textContent = day;
 
-        // Wochenende hervorheben
-        const weekday = new Date(currentYear, currentMonth, day-1).getDay();
-        if (weekday === 0 || weekday === 6) dayDiv.classList.add('weekend');
+
 
         // Statusfarben
         if (data[dateStr]) {
