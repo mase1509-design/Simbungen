@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'simbungen-tracker';
+const STORAGE_KEY = 'simungen-tracker';
 let data = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 
 let selectedDate = null;
