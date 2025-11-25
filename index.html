@@ -27,9 +27,40 @@
 
     main {
         width: 90%;
-        max-width: 500px;
+        max-width: 600px;
         margin-top: 20px;
         flex-grow: 1;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    .day {
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        cursor: pointer;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .day.complete {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .day.incomplete {
+        background-color: #f8d7da;
+        color: #721c24;
     }
 
     .exercise {
@@ -62,31 +93,28 @@
         background-color: #357ab8;
     }
 
-    h2 {
-        margin-top: 30px;
-        text-align: center;
+    #exercises-container {
+        margin-top: 20px;
     }
 
-    .calendar {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        gap: 5px;
-        margin-top: 15px;
-    }
+</style>
+</head>
+<body>
 
-    .day {
-        background: #fff;
-        border-radius: 5px;
-        padding: 10px;
-        text-align: center;
-        font-size: 14px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
+<header>
+    <h1>Simbungen Tracker</h1>
+</header>
 
-    .day.complete {
-        background-color: #d4edda;
-        color: #155724;
-    }
+<main>
+    <h2>Monatsübersicht</h2>
+    <div id="calendar" class="calendar"></div>
 
-    .day.incomplete {
-        background-color: #f8d7da;
+    <div id="exercises-container">
+        <h2 id="selected-date-title">Wähle einen Tag</h2>
+        <div id="exercises"></div>
+    </div>
+</main>
+
+<script src="./main.js"></script>
+</body>
+</html>
