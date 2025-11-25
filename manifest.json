@@ -1,6 +1,6 @@
 {
-  "name": "Simbungen Tracker",
-  "short_name": "Simbungen",
+  "name": "Simungen Tracker",
+  "short_name": "Simungen",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f4f6f8",
