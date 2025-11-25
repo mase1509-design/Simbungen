@@ -11,7 +11,7 @@ const exerciseNames = ["Innenseiten Heber", "Fußabrollen", "Kniebeugen"];
 function renderMonthLabel() {
     const monthNames = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
     document.getElementById('month-label').textContent = `${monthNames[currentMonth]} ${currentYear}`;
-}
+} 
 
 // Kalender rendern
 function renderCalendar() {
