@@ -1,13 +1,92 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8" />
-<link rel="manifest" href="manifest.json" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Simungen</title>
-</head>
-<body>
-<div id="root"></div>
-<script type="module" src="./main.js"></script>
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simbungen Tracker</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f6f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    header {
+        width: 100%;
+        background-color: #4a90e2;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    main {
+        width: 90%;
+        max-width: 500px;
+        margin-top: 20px;
+        flex-grow: 1;
+    }
+
+    .exercise {
+        background: white;
+        margin-bottom: 15px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .exercise.done {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4a90e2;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #357ab8;
+    }
+
+    h2 {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        margin-top: 15px;
+    }
+
+    .day {
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .day.complete {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .day.incomplete {
+        background-color: #f8d7da;
